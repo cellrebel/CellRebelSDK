@@ -75,3 +75,6 @@ Use `stopTracking` if you need to manually stop measurement (for example when pe
 ```java
 TrackingManager.stopTracking();
 ```
+
+## Demo project
+https://github.com/cellrebel/CellRebelSDK/tree/master/demo
