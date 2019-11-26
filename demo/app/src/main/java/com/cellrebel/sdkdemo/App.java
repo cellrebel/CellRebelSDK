@@ -1,7 +1,7 @@
 package com.cellrebel.sdkdemo;
 
-import android.arch.lifecycle.LifecycleObserver;
-import android.support.multidex.MultiDexApplication;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.multidex.MultiDexApplication;
 
 import com.cellrebel.sdk.workers.TrackingManager;
 

@@ -22,6 +22,9 @@
             android:authorities="${applicationId}.SdkInitProvider"
             android:enabled="true"
             android:exported="false" />
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true"/>
     </application>
 
 </manifest>

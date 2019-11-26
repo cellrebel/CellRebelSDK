@@ -7,9 +7,9 @@
   <packaging>aar</packaging>
   <dependencies>
     <dependency>
-      <groupId>com.android.support</groupId>
-      <artifactId>appcompat-v7</artifactId>
-      <version>28.0.0</version>
+      <groupId>androidx.appcompat</groupId>
+      <artifactId>appcompat</artifactId>
+      <version>1.0.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.code.gson</groupId>
@@ -19,17 +19,17 @@
     <dependency>
       <groupId>com.google.android.gms</groupId>
       <artifactId>play-services-location</artifactId>
-      <version>16.0.0</version>
+      <version>17.0.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.firebase</groupId>
       <artifactId>firebase-iid</artifactId>
-      <version>17.1.2</version>
+      <version>20.0.1</version>
     </dependency>
     <dependency>
       <groupId>com.google.firebase</groupId>
       <artifactId>firebase-core</artifactId>
-      <version>16.0.8</version>
+      <version>17.2.1</version>
     </dependency>
     <dependency>
       <groupId>com.squareup.retrofit2</groupId>
