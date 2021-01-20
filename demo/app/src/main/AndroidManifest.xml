@@ -17,11 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <provider
-            android:name="com.cellrebel.sdk.SdkInitProvider"
-            android:authorities="${applicationId}.SdkInitProvider"
-            android:enabled="true"
-            android:exported="false" />
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true"/>

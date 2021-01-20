@@ -8,7 +8,7 @@ Add CellRebel Maven repository in project `build.gradle` file:
 allprojects {
     repositories {
         maven {
-            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/master/releases'
+            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/rc/releases'
         }
         ...
 }
@@ -18,7 +18,7 @@ Then, add the library dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.5.11'
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.7.0'
 }
 ```
 
@@ -34,24 +34,8 @@ android {
 ```
 
 ## Usage
-CellRebel SDK requires InitProvider to be added to the application `manifest`:
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cellrebelsdkdemoapp">
 
-    <application
-       ...
-        <provider
-            android:name="com.cellrebel.sdk.SdkInitProvider"
-            android:authorities="${applicationId}.SdkInitProvider"
-            android:enabled="true"
-            android:exported="false" />
-    </application>
-</manifest>
-```
-
-Initialize SDK using your unique CLIENT_KEY string on application create:
+Initialize SDK using your unique CLIENT_KEY string on application onCreate event:
 ```java
 import com.cellrebel.sdk.workers.TrackingManager;
 
@@ -76,4 +60,4 @@ TrackingManager.stopTracking();
 ```
 
 ## Demo project
-https://github.com/cellrebel/CellRebelSDK/tree/master/demo
+https://github.com/cellrebel/CellRebelSDK/tree/rc/demo
