@@ -1,5 +1,9 @@
 # CellRebel Android SDK
 
+## Notice for existing users updating to CellRebelSDK 1.7.0 and newer
+
+CellRebelSDK is no longer requires InitProvider to be added to the application `manifest`. Please remove SdkInitProvider from your application Manifest file after update.
+
 ## Download
 
 Add CellRebel Maven repository in project `build.gradle` file:
@@ -18,7 +22,7 @@ Then, add the library dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.5.11'
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.7.0'
 }
 ```
 
@@ -34,22 +38,6 @@ android {
 ```
 
 ## Usage
-CellRebel SDK requires InitProvider to be added to the application `manifest`:
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cellrebelsdkdemoapp">
-
-    <application
-       ...
-        <provider
-            android:name="com.cellrebel.sdk.SdkInitProvider"
-            android:authorities="${applicationId}.SdkInitProvider"
-            android:enabled="true"
-            android:exported="false" />
-    </application>
-</manifest>
-```
 
 Initialize SDK using your unique CLIENT_KEY string on application create:
 ```java
