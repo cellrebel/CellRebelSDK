@@ -12,7 +12,7 @@ Add CellRebel Maven repository in project `build.gradle` file:
 allprojects {
     repositories {
         maven {
-            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/master/releases'
+            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/1.8.0-rc/releases'
         }
         ...
 }
@@ -22,7 +22,7 @@ Then, add the library dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.7.3'
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.8.0-rc1'
 }
 ```
 
@@ -61,6 +61,21 @@ TrackingManager.startTracking(this);
 In some (rare) cases, if very high load tasks need to be performed, `stopTracking` can be used to abort an ongoing measurement sequence:
 ```java
 TrackingManager.stopTracking();
+```
+
+Call `getVersion` to retrieve current version of CellRebelSDK:
+```java
+String cellRebelSDKVersion = TrackingManager.getVersion();
+```
+
+Use `clearUserData` if you need to request the removal of user data collected (based on GDPR 'right to be forgotten'):
+```java
+TrackingManager.clearUserData(context, new OnCompleteListener() {
+    @Override
+    public void onCompleted(boolean success) {
+        // Handle result
+    }
+});
 ```
 
 ## Demo project
