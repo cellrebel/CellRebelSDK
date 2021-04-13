@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CellRebel SDK Demo</string>
+    <string name="clear_user_data">Clear User Data</string>
+    <string name="sdk_version">CellRebelSDK version: </string>
 </resources>
