@@ -70,7 +70,7 @@ String cellRebelSDKVersion = TrackingManager.getVersion();
 
 Use `clearUserData` if you need to request the removal of user data collected (based on GDPR 'right to be forgotten'):
 ```java
-TrackingManager.clearUserData(context, new OnCompleteListener() {
+TrackingManager.clearUserData(context, new TrackingManager.OnCompleteListener() {
     @Override
     public void onCompleted(boolean success) {
         // Handle result
