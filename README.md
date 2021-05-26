@@ -58,6 +58,8 @@ Use `startTracking` to start measurement. On the first launch it's best to call 
 ```java
 TrackingManager.startTracking(this);
 ```
+No measurements will be done until `startTracking` is called again (you as a developer have full control on when the sampling is done).
+
 In some (rare) cases, if very high load tasks need to be performed, `stopTracking` can be used to abort an ongoing measurement sequence:
 ```java
 TrackingManager.stopTracking();
