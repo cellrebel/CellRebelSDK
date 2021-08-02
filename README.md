@@ -22,7 +22,7 @@ Then, add the library dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.8.1-rc1'
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.8.1-rc2'
 }
 ```
 
