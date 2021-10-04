@@ -64,6 +64,7 @@ In some (rare) cases, if very high load tasks need to be performed, `stopTrackin
 ```java
 TrackingManager.stopTracking();
 ```
+There is no need of calling `stopTracking` when the application is closed, as it stops all SDK related activities including sending reports. 
 
 ## Demo project
 https://github.com/cellrebel/CellRebelSDK/tree/master/demo
