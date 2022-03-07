@@ -12,7 +12,7 @@ Add CellRebel Maven repository in project `build.gradle` file:
 allprojects {
     repositories {
         maven {
-            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/master/releases'
+            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/lite/releases'
         }
         ...
 }
@@ -22,7 +22,7 @@ Then, add the library dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.3'
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.3-lite'
 }
 ```
 
