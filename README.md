@@ -1,40 +1,51 @@
-# CellRebel Android SDK
+# CellRebel Android SDK in JAR file
 
-## Notice for existing users updating to CellRebelSDK 1.7.0 and newer
-
-CellRebelSDK is no longer requires InitProvider to be added to the application `manifest`. Please remove SdkInitProvider from your application Manifest file after update.
 
 ## Download
 
-Add CellRebel Maven repository in project `build.gradle` file:
-
-```gradle
-allprojects {
-    repositories {
-        maven {
-            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/master/releases'
-        }
-        ...
-}
-```
+Download library [here](https://github.com/cellrebel/CellRebelSDK/blob/jar/demo/app/libs/cellrebel-sdk.jar)
 
 Then, add the library dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.3'
+     implementation files('libs/cellrebel-sdk.jar')
+     
+     // add other needed libraries if you don't alrady use it
+     
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation "com.squareup.retrofit2:retrofit:2.6.4"
+    implementation 'com.google.android.gms:play-services-ads:16.0.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    
+    api "com.squareup.retrofit2:converter-gson:2.6.4"
+    api 'androidx.work:work-runtime:2.5.0'
+  
 }
 ```
 
-CellRebel SDK requires Java 8, add target and source compatibility to android compile options in module `build.gradle`:
-```gradle
-android {
+### Testing Pin & Biometrics
+Add permissions in AndroidManifest.xml file
+```
+<manifest ... >
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   
+    <application>
     ...
-    compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
-    }
-}
+     <receiver
+            android:name="com.cellrebel.sdk.utils.PhoneStateReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
 ```
 
 ## Usage
