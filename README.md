@@ -3,9 +3,11 @@
 
 ## Download
 
-Download library [here](https://github.com/cellrebel/CellRebelSDK/blob/jar/demo/app/libs/cellrebel-sdk.jar)
+Download the library [here](https://github.com/cellrebel/CellRebelSDK/blob/jar/cellrebel-sdk.jar)
 
-Then, add the library dependency to module `build.gradle`:
+## Install
+
+Add the library and dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
@@ -24,7 +26,6 @@ dependencies {
 }
 ```
 
-### Testing Pin & Biometrics
 Add permissions in AndroidManifest.xml file
 ```
 <manifest ... >
@@ -78,4 +79,4 @@ TrackingManager.stopTracking();
 There is no need of calling `stopTracking` when the application is closed, as it stops all SDK related activities including sending reports. 
 
 ## Demo project
-https://github.com/cellrebel/CellRebelSDK/tree/master/demo
+https://github.com/cellrebel/CellRebelSDK/tree/jar/demo
