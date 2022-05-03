@@ -3,7 +3,7 @@
 
 ## Download
 
-Download the library [here](https://github.com/cellrebel/CellRebelSDK/blob/jar/cellrebel-sdk.jar)
+Download the library [here](https://github.com/cellrebel/CellRebelSDK/blob/jar/cellrebel-sdk.jar?raw=true)
 
 ## Install
 
