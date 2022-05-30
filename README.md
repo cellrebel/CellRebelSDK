@@ -22,7 +22,7 @@ Then, add the library dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.4'
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.5'
 }
 ```
 
@@ -49,22 +49,22 @@ public class App extends MultiDexApplication implements LifecycleObserver {
 	public void onCreate() {
 		super.onCreate();
 
-		TrackingManager.init(this, "CLIENT_KEY");
+        CRMeasurementSDK.init(this, "CLIENT_KEY");
 	}
 }
 ```
 
-Use `startTracking` to start measurement. On the first launch it's best to call this method after user response on location permission dialog. During the next sessions this method should be called on main activity onCreate lifecycle callback:
+Use `startMeasuring` to start measurement. On the first launch it's best to call this method after user response on location permission dialog. During the next sessions this method should be called on main activity onCreate lifecycle callback:
 ```java
-TrackingManager.startTracking(this);
+CRMeasurementSDK.startMeasuring(this, null);
 ```
-No measurements will be done until `startTracking` is called again (you as a developer have full control on when the sampling is done).
+No measurements will be done until `startMeasuring` is called again (you as a developer have full control on when the sampling is done).
 
-In some (rare) cases, if very high load tasks need to be performed, `stopTracking` can be used to abort an ongoing measurement sequence:
+In some (rare) cases, if very high load tasks need to be performed, `stopMeasuring` can be used to abort an ongoing measurement sequence:
 ```java
-TrackingManager.stopTracking();
+CRMeasurementSDK.stopMeasuring(this);
 ```
-There is no need of calling `stopTracking` when the application is closed, as it stops all SDK related activities including sending reports. 
+There is no need of calling `stopMeasuring` when the application is closed, as it stops all SDK related activities including sending reports. 
 
 ## Demo project
 https://github.com/cellrebel/CellRebelSDK/tree/master/demo

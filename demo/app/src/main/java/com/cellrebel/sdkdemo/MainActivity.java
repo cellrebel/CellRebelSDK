@@ -3,7 +3,7 @@ package com.cellrebel.sdkdemo;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.cellrebel.sdk.workers.TrackingManager;
+import com.cellrebel.sdk.CRMeasurementSDK;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,6 +12,6 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		TrackingManager.startTracking(this);
+		CRMeasurementSDK.startMeasuring(this, null);
 	}
 }
