@@ -22,7 +22,7 @@ Then, add the library dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.14-rc1'
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.15-rc1'
 }
 ```
 
@@ -31,8 +31,8 @@ CellRebel SDK requires Java 8, add target and source compatibility to android co
 android {
     ...
     compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
+        targetCompatibility 11
+        sourceCompatibility 11
     }
 }
 ```
