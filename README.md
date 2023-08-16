@@ -1,12 +1,8 @@
 # CellRebel Android SDK
 
-## Notice for existing users updating to CellRebelSDK 1.9.23 and newer
+## Notice for partners using CellRebelSDK 1.9.23 and newer
 
 CellRebelSDK updated `play-services-location` library to version 21.0.1 which is not backward compatible with older versions. If your app is still using older `play-services-location` please consider updating it to the latest version or switching to the support version of CellRebelSDK (https://github.com/cellrebel/CellRebelSDK/tree/support) which still uses the older dependencies. 
-
-## Notice for existing users updating to CellRebelSDK 1.7.0 and newer
-
-CellRebelSDK is no longer requires InitProvider to be added to the application `manifest`. Please remove SdkInitProvider from your application Manifest file after update.
 
 ## Download
 
