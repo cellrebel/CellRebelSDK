@@ -17,7 +17,9 @@ dependencies {
      
     implementation 'com.google.android.gms:play-services-location:20.0.0'
     implementation "com.squareup.retrofit2:retrofit:2.6.4"
-    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-common:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-process:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-runtime:2.5.1"
     
     api "com.squareup.retrofit2:converter-gson:2.6.4"
     api 'androidx.work:work-runtime:2.7.1'
