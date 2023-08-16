@@ -3,13 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.cellrebel.android</groupId>
   <artifactId>cellrebel-sdk</artifactId>
-  <version>1.9.23</version>
+  <version>1.9.25</version>
   <packaging>aar</packaging>
   <dependencies>
     <dependency>
       <groupId>com.google.android.gms</groupId>
       <artifactId>play-services-location</artifactId>
-      <version>21.0.1</version>
+      <version>19.0.1</version>
     </dependency>
     <dependency>
       <groupId>androidx.lifecycle</groupId>
