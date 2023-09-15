@@ -15,7 +15,7 @@ dependencies {
      
      // add other needed libraries if you don't alrady use it
      
-    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
     implementation "com.squareup.retrofit2:retrofit:2.6.4"
     implementation "androidx.lifecycle:lifecycle-common:2.5.1"
     implementation "androidx.lifecycle:lifecycle-process:2.5.1"
