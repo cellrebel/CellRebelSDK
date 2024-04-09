@@ -1,9 +1,5 @@
 # CellRebel Android SDK
 
-## Notice for partners using CellRebelSDK 1.9.23 and newer
-
-CellRebelSDK updated `play-services-location` library to version 21.0.1 which is not backward compatible with older versions. If your app is still using older `play-services-location` please consider updating it to the latest version or switching to the support version of CellRebelSDK (https://github.com/cellrebel/CellRebelSDK/tree/support) which still uses the older dependencies. 
-
 ## Download
 
 Add CellRebel Maven repository in project `build.gradle` file:
@@ -22,7 +18,7 @@ Then, add the library dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.35'
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.36'
 }
 ```
 
