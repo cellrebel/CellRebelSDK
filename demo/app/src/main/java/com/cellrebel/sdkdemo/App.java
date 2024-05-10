@@ -11,6 +11,6 @@ public class App extends MultiDexApplication implements LifecycleObserver {
 	public void onCreate() {
 		super.onCreate();
 
-		CRMeasurementSDK.init(this, "d7mrw1n1ig");
+		CRMeasurementSDK.init(this, "d7mrw1n1ig", "DEVICE_ID");
 	}
 }
