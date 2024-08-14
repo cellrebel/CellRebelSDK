@@ -16,11 +16,12 @@ buildscript {
 
 allprojects {
     repositories {
-        maven {
-            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/master/releases'
-        }
+//        maven {
+//            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/beta/releases'
+//        }
         google()
         mavenCentral()
+        mavenLocal()
     }
 }
 

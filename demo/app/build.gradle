@@ -13,8 +13,8 @@ android {
     }
     buildTypes {
         release {
-            debuggable true
             minifyEnabled false
+            debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.debug
         }
@@ -34,5 +34,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.40'
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.40-beta6'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 }
