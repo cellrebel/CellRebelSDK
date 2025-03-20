@@ -3,8 +3,8 @@
   <groupId>com.cellrebel.android</groupId>
   <artifactId>cellrebel-sdk</artifactId>
   <versioning>
-    <latest>1.9.47-beta</latest>
-    <release>1.9.47-beta</release>
+    <latest>1.9.48-beta</latest>
+    <release>1.9.48-beta</release>
     <versions>
       <version>1.2.5</version>
       <version>1.3.0</version>
@@ -80,7 +80,8 @@
       <version>1.9.45-beta</version>
       <version>1.9.46-beta</version>
       <version>1.9.47-beta</version>
+      <version>1.9.48-beta</version>
     </versions>
-    <lastUpdated>20250318041010</lastUpdated>
+    <lastUpdated>20250320004630</lastUpdated>
   </versioning>
 </metadata>
