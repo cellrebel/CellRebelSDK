@@ -18,18 +18,7 @@ Then, add the library dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.44'
-}
-```
-
-CellRebel SDK requires Java 8, add target and source compatibility to android compile options in module `build.gradle`:
-```gradle
-android {
-    ...
-    compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
-    }
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.49'
 }
 ```
 
