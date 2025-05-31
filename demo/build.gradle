@@ -17,7 +17,7 @@ buildscript {
 allprojects {
     repositories {
         maven {
-            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/hotfix/releases'
+            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/master/releases'
         }
         google()
         mavenCentral()

@@ -8,7 +8,7 @@ Add CellRebel Maven repository in project `build.gradle` file:
 allprojects {
     repositories {
         maven {
-            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/hotfix/releases'
+            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/master/releases'
         }
         ...
 }
