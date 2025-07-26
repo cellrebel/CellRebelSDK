@@ -101,7 +101,7 @@ CRMeasurementSDK.startMeasuring(context);
 ```
 
 - Call **after location permission dialog** (first launch)
-- Then call in **MainActivity.onCreate()** (subsequent launches) or **MainActivity.onresume()** if your maint activity is not created every time the app is launched. We give you a control over when our SDK can run, please make sure that `startMeasuring` is called at least once on every application launch. Feel free to place this call in other activities if that makes more sense to start our SDK from there instead.
+- Then call in **MainActivity.onStart()** (subsequent launches). We give you a control over when our SDK can run, please make sure that `startMeasuring` is called at least once on every application launch. Feel free to place this call in other activities if that makes more sense to start our SDK from there instead.
 - No data is collected until this is called
 - Calling `startMeasuring` multiple times will not trigger multiple measurements and is safe to do. We have our internal mechanism that prevents measurements from running in parallel or too often. 
 
