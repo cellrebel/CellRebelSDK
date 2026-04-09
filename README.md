@@ -1,8 +1,8 @@
 # CellRebel Android SDK
 
-## Notice for existing users updating to CellRebelSDK 1.7.0 and newer
+## Notice for partners using CellRebelSDK 1.9.23 and newer
 
-CellRebelSDK is no longer requires InitProvider to be added to the application `manifest`. Please remove SdkInitProvider from your application Manifest file after update.
+CellRebelSDK updated `play-services-location` library to version 21.0.1 which is not backward compatible with older versions. If your app is still using older `play-services-location` please consider updating it to the latest version or switching to the support version of CellRebelSDK (https://github.com/cellrebel/CellRebelSDK/tree/support) which still uses the older dependencies. 
 
 ## Download
 
@@ -12,7 +12,7 @@ Add CellRebel Maven repository in project `build.gradle` file:
 allprojects {
     repositories {
         maven {
-            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/support/releases'
+            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/beta/releases'
         }
         ...
 }
@@ -22,18 +22,7 @@ Then, add the library dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.29'
-}
-```
-
-CellRebel SDK requires Java 8, add target and source compatibility to android compile options in module `build.gradle`:
-```gradle
-android {
-    ...
-    compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
-    }
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.9.68-beta'
 }
 ```
 
