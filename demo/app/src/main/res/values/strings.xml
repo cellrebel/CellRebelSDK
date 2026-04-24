@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">CellRebel SDK Demo</string>
+    <string name="consent_header">Consent to Data Collection and Measurement</string>
+    <string name="consent_body"><![CDATA[
+    We use measurement technologies to understand how this app performs and to improve user experience.\n\n
+    With your permission, we may collect and process limited information from your device, such as:\n
+    \t• Network performance (e.g., connection speed, latency)\n
+    \t• Device and app information (e.g., model, OS version, app version)\n
+    \t• Approximate location (if you grant location permission)\n\n
+    This data helps us monitor service quality, detect issues, and improve reliability.\n\n
+    Partners\n\n
+    We share this data with the following partner for measurement and analytics purposes:\n\n
+    \t\t• CellRebel\n\n
+    This partner processes data on our behalf and does not use it to personally identify you.\n\n
+    Your Choices\n\n
+    \t• Accept – Allow data collection for measurement and analytics\n
+    \t• Decline – No measurement data will be collected\n\n
+]]></string>
+    <string name="consent_accept">Accept</string>
+    <string name="consent_decline">Decline</string>
+    <string name="switch_location">Location Permission</string>
 </resources>
