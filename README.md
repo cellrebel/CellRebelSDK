@@ -17,7 +17,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven {
-            url = uri("https://raw.githubusercontent.com/cellrebel/CellRebelSDK/master/releases")
+            url = uri("https://raw.githubusercontent.com/cellrebel/CellRebelSDK/proguard/releases")
         }
     }
 }
@@ -31,7 +31,7 @@ allprojects {
         google()
         mavenCentral()
         maven {
-            url "https://raw.githubusercontent.com/cellrebel/CellRebelSDK/master/releases"
+            url "https://raw.githubusercontent.com/cellrebel/CellRebelSDK/proguard/releases"
         }
     }
 }
