@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ConsentActivity" />
+        <activity android:name=".PermissionsActivity" />
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true"/>

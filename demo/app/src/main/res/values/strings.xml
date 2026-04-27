@@ -18,5 +18,21 @@
 ]]></string>
     <string name="consent_accept">Accept</string>
     <string name="consent_decline">Decline</string>
-    <string name="switch_location">Location Permission</string>
+    <string name="permissions_header">App Permissions</string>
+    <string name="permissions_body">This demo app requests a few permissions to improve measurement accuracy and provide better insights.</string>
+    <string name="permissions_location">📍 Location access helps to:</string>
+    <string name="permissions_bullet_1"><![CDATA[
+    • Improve measurement accuracy based on your location\n
+    • Enhance network data with geographic context
+]]></string>
+    <string name="permissions_phone_state">📱 Phone state access helps to:</string>
+    <string name="permissions_bullet_2"><![CDATA[
+    • Identify your network operator\n
+    • Improve signal-related measurements\n
+    We do not make or manage phone calls.
+]]></string>
+    <string name="permissions_note">Your data is used only to improve network measurements.</string>
+    <string name="permissions_accept">Continue</string>
+    <string name="permissions_decline">Not Now</string>
+    <string name="image_content">location_image</string>
 </resources>
