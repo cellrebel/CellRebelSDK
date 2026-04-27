@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/permissions_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/permissions_header"
+        android:textColor="#1A1A1A"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <TextView
+        android:id="@+id/permissions_body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:lineSpacingExtra="4sp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:text="@string/permissions_body"
+        android:textAlignment="center"
+        android:textColor="#4A4A4A"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/permissions_header"
+        app:layout_constraintVertical_bias="0.013" />
+
+
+    <ImageView
+        android:id="@+id/location_image"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/image_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/permissions_body"
+        app:srcCompat="@drawable/location_image" />
+
+    <TextView
+        android:id="@+id/permissions_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:lineSpacingExtra="4sp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:text="@string/permissions_location"
+        android:textAlignment="textStart"
+        android:textColor="#4A4A4A"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_image"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/permissions_bullet_1"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:lineSpacingExtra="4sp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:text="@string/permissions_bullet_1"
+        android:textAlignment="textStart"
+        android:textColor="#4A4A4A"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/permissions_location"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/permissions_phone_state"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="24dp"
+        android:lineSpacingExtra="4sp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:text="@string/permissions_phone_state"
+        android:textColor="#4A4A4A"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/permissions_bullet_1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/permissions_bullet_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:lineSpacingExtra="4sp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:text="@string/permissions_bullet_2"
+        android:textAlignment="textStart"
+        android:textColor="#4A4A4A"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/permissions_phone_state"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/permissions_note"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0.7"
+        android:gravity="center"
+        android:text="@string/permissions_note"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/permissions_bullet_2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/permissions_accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:width="300dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/permissions_accept"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/permissions_note"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/permissions_decline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="300dp"
+        android:text="@string/permissions_decline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/permissions_accept"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
