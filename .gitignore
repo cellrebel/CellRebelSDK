@@ -1,2 +1,7 @@
 demo/.idea/gradle.xml
 demo/.idea/jarRepositories.xml
+demo/.idea/AndroidProjectSystem.xml
+demo/.idea/deploymentTargetSelector.xml
+demo/.idea/migrations.xml
+demo/.idea/runConfigurations.xml
+demo/.idea/caches/deviceStreaming.xml
