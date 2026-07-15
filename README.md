@@ -50,6 +50,22 @@ dependencies {
 
 ---
 
+### ⚠️ Upgrading to 1.10.1: ExoPlayer Version Check
+
+> If your app already depends on **ExoPlayer**, make sure it is on version **2.19.0 or newer**. SDK 1.10.1 may cause issues when combined with older ExoPlayer versions.
+>
+> Either upgrade ExoPlayer to `2.19.0`+, or if you need to keep an older version, force it explicitly so it doesn't get bumped transitively:
+
+```groovy
+configurations.all {
+    resolutionStrategy {
+        force "com.google.android.exoplayer:exoplayer-core:2.18.1" // your pinned version
+    }
+}
+```
+
+---
+
 ### ⚠️ AppCompat Required
 
 > The SDK uses `AppCompatImageView`, so the `androidx.appcompat` dependency must be present.  
