@@ -44,7 +44,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation "com.cellrebel.android:cellrebel-sdk:1.9.59"
+    implementation "com.cellrebel.android:cellrebel-sdk:1.10.1"
 }
 ```
 
