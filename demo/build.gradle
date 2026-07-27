@@ -19,6 +19,7 @@ allprojects {
         maven {
             url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/master/releases'
         }
+        mavenLocal()
         google()
         mavenCentral()
     }
