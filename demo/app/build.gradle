@@ -34,5 +34,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.10.1-beta'
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.11.0'
+    // POW-4689 validation: Gson 2.10+ tolerates R8-renamed enum constants (the SDK pulls in 2.8.5)
+    implementation 'com.google.code.gson:gson:2.8.8'
 }
