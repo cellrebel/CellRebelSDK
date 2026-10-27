@@ -12,7 +12,7 @@ Add CellRebel Maven repository in project `build.gradle` file:
 allprojects {
     repositories {
         maven {
-            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/beta/releases'
+            url 'https://raw.githubusercontent.com/cellrebel/CellRebelSDK/support/releases'
         }
         ...
 }
@@ -22,7 +22,7 @@ Then, add the library dependency to module `build.gradle`:
 ```gradle
 dependencies {
     ...
-    implementation 'com.cellrebel.android:cellrebel-sdk:1.11.1'
+    implementation 'com.cellrebel.android:cellrebel-sdk:1.12.0'
 }
 ```
 
@@ -54,6 +54,24 @@ In some (rare) cases, if very high load tasks need to be performed, `stopMeasuri
 CRMeasurementSDK.stopMeasuring(this);
 ```
 There is no need of calling `stopMeasuring` when the application is closed, as it stops all SDK related activities including sending reports. 
+
+## GPS truncation
+
+Since 1.12.0, you can reduce the precision of the location the SDK collects. While truncation is enabled, latitude and longitude are truncated toward zero to 2 decimal places (about 1 km) before they are stored or sent, and each measurement reports `isGpsTruncated = true`:
+```java
+CRMeasurementSDK.setGpsTruncationEnabled(true);
+```
+Truncation is disabled by default. The setting is kept in memory only, so it resets to disabled every time the app process starts, including when the system starts the process to run background measurements. Call it in `Application.onCreate`, before `CRMeasurementSDK.init`:
+```java
+@Override
+public void onCreate() {
+    super.onCreate();
+
+    CRMeasurementSDK.setGpsTruncationEnabled(true);
+    CRMeasurementSDK.init(this, "CLIENT_KEY");
+}
+```
+The change takes effect immediately, including for a measurement that is already running. Measurements captured before the change keep the precision they were captured with. Call `CRMeasurementSDK.setGpsTruncationEnabled(false)` to go back to full precision.
 
 ## Demo project
 https://github.com/cellrebel/CellRebelSDK/tree/master/demo
