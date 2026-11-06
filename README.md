@@ -44,7 +44,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation "com.cellrebel.android:cellrebel-sdk:1.10.2"
+    implementation "com.cellrebel.android:cellrebel-sdk:1.12.2"
 }
 ```
 
@@ -63,6 +63,16 @@ configurations.all {
     }
 }
 ```
+
+---
+
+### ⚠️ Upgrading to 1.12.x: Kotlin Version Check
+
+> SDK 1.12.x depends on **`kotlin-stdlib` 2.4.20**, and Gradle will resolve your app's `kotlin-stdlib` to that version. If your app compiles Kotlin with an older Kotlin Gradle plugin (2.2 or earlier), the build can fail with an error like:
+>
+> `Module was compiled with an incompatible version of Kotlin. The binary version of its metadata is 2.4.0, expected version is 2.2.0.`
+>
+> Upgrade the Kotlin Gradle plugin to **2.3.0 or newer**. Apps written only in Java are not affected. Don't force `kotlin-stdlib` down to an older version: the SDK is built against 2.4.20 and may fail at runtime with an older one.
 
 ---
 
@@ -134,6 +144,47 @@ CRMeasurementSDK.stopMeasuring(context);
 
 ---
 
+### 3. GPS Truncation
+
+Since 1.12.0, you can reduce the precision of the location the SDK collects. While truncation is enabled, latitude and longitude are truncated toward zero to 2 decimal places before they are stored or sent:
+
+```java
+CRMeasurementSDK.setGpsTruncationEnabled(true);
+```
+
+- Disabled by default
+- Kept in memory only, so it resets to disabled every time the app process starts, including when the system starts the process to run background measurements
+- Call it in `Application.onCreate`, before `CRMeasurementSDK.init`:
+
+**Kotlin:**
+
+```kotlin
+class MyApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        CRMeasurementSDK.setGpsTruncationEnabled(true)
+        CRMeasurementSDK.init(this, "YOUR_CLIENT_KEY")
+    }
+}
+```
+
+**Java:**
+
+```java
+public class MyApp extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        CRMeasurementSDK.setGpsTruncationEnabled(true);
+        CRMeasurementSDK.init(this, "YOUR_CLIENT_KEY");
+    }
+}
+```
+
+The change takes effect immediately, including for a measurement that is already running. Measurements captured before the change keep the precision they were captured with. Call `CRMeasurementSDK.setGpsTruncationEnabled(false)` to go back to full precision.
+
+---
+
 ## 📡 Note about passive measurement collection
 
 As of SDK version 1.9.40, a configuration refresh from CellRebel's web service is performed whenever the SDK internally references settings. Therefore, any attempted measurement, active or passive, will always first fetch a fresh configuration. This allows disabling of any or all measurement types through the CellRebel remote service, regardless of whether startMeasuring or stopMeasuring has been called.
@@ -147,13 +198,15 @@ This addresses a limitation in previous versions' ability to disable measurement
 Get current SDK version:
 
 ```java
-String version = CRMeasurementSDK.getVersion();
+String version = CRMeasurementSDK.version(context);
 ```
 
 Clear user data for GDPR "right to be forgotten":
 
 ```java
-CRMeasurementSDK.clearUserData(context, new CRMeasurementSDK.OnCompleteListener() {
+import com.cellrebel.sdk.workers.TrackingManager;
+
+CRMeasurementSDK.clearUserData(context, new TrackingManager.OnCompleteListener() {
     @Override
     public void onCompleted(boolean success) {
         // Handle result
